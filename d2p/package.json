@@ -1,0 +1,21 @@
+{
+    "name": "d2p",
+    "description": "",
+    "version": "0.0.1",
+    "main": "./d2p.js",
+    "author": {
+        "name": "Rajavenkat",
+        "email": "you@email.example"
+    },
+    "keywords": [],
+    "licenses": {
+        "type": "none"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/YOUR_LOGIN/d2p.git"
+    },
+    "bugs": {
+        "url": "http://github.com/YOUR_LOGIN/d2p/issues"
+    }
+}

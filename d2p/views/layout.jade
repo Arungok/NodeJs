@@ -1,0 +1,37 @@
+doctype
+html
+  head
+    title #{title} - #{pageurl} - My Site
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    header
+      h1 My Site test 3
+      nav.menu
+        ul
+          each url, name in menu
+            if pageurl
+              +menuli(name, url, pageurl)
+            else
+              +menuli(name, url, pageurl)
+    .container
+      .main-content
+        block content
+      .sidebar
+        block sidebar
+
+    #container
+      .row
+       .col-lg-8
+       .col-lg-4
+
+    footer
+      p Running on node with Express, Jade and Stylus
+
+mixin link(href, name)
+  a.link(href=href)&attributes(attributes)=name
+
+mixin menuli(name,url,match)
+  if match && name == match
+    li.active: +link(url,name)
+  else
+    li: +link(url,name)
