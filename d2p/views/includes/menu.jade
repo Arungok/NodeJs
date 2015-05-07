@@ -1,0 +1,9 @@
+header
+  h1 Romeo & Juliet
+  nav.menu
+    ul
+      each url, name in menu
+        if (name === pageurl)
+          li.active: a(href=url, class='active')=name
+        else
+          li: a(href=url, class='active')=name

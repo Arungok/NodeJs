@@ -1,41 +1,21 @@
-extend layout
-block content
-  p
-    | Vivamus hendrerit arcu sed erat molestie
-    | vehicula. Sed auctor neque eu tellus
-    | rhoncus ut eleifend nibh porttitor. Ut in.
-  p
-    | Donec congue lacinia dui, a porttitor
-    | lectus condimentum laoreet. Nunc eu
-    | ullamcorper orci. Quisque eget odio ac
-    | lectus vestibulum faucibus eget in metus.
-    | In pellentesque faucibus vestibulum. Nulla
-    | at nulla justo, eget luctus tortor.
-block login
-  #login
-    h1 Login Form
-    form(action= '/user-login' , method='post' , class='login-form')
-      div.input
-        span.label Email
-        input(type='email',name='email')
-      div.input
-        span.label Password
-        input(type='password',name='password')
-      input(type='submit',name='submit' value='Login')
+html
 
-  #registration
-    h1 Registration Form
-    form(action= '/user-register' , method='post' , class='register-form')
-      div.input
-        span.label Name
-        input(type='text',name='name',require)
-      div.input
-        span.label Email
-        input(type='email',name='email',require)
-      div.input
-        span.label Password
-        input(type='password',name='password',require)
-      div.input
-        span.label Re-Password
-        input(type='password',name='repassword',require)
-      input(type='submit',name='submit' value='Register')
+  //- includes head from includes folder .jade will be added automatically
+  include includes/head
+
+  body
+
+    include includes/menu
+
+    .container
+      .in-blk.blk3x4
+        block content
+      .in-blk.blk1x4
+        block sidebar
+
+    //-#container
+      .row
+       .col-lg-8
+       .col-lg-4 -//
+
+    include includes/footer
