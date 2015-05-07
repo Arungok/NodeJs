@@ -71,8 +71,8 @@ td {
   outline: 0;
   font-weight: inherit;
   font-style: inherit;
-  font-family: inherit;
   font-size: 100%;
+  font-family: "Myriad Set Pro", "Helvetica Neue", "Helvetica", "Arial", "Verdana", "sans-serif";
   vertical-align: baseline;
 }
 body {
@@ -126,8 +126,8 @@ header h1 {
   font-size: 25px;
 }
 .container {
-  width: 500px;
-  margin: 50px auto;
+  max-width: 1000px;
+  margin: 10px auto;
   overflow: hidden;
 }
 .main-content {
@@ -142,11 +142,6 @@ header h1 {
   width: 200px;
 }
 .sidebar .widget {
-  /*
-  * Note the lack of vendor
-  * prefixes here. Nib will
-  * add them for us
-  */
   padding: 12px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -203,4 +198,73 @@ nav.menu ul li.active a:hover {
 }
 nav.menu ul li.active a, nav.menu ul li a:hover {
   background-color: rgba(68, 68, 68, .5);
+}
+.in-blk {
+  display: inline-block;
+  float: left;
+}
+.container .blk3x4 {
+  width: 68%;
+  padding: 1%;
+}
+.container .blk1x4 {
+  width:28%;
+  padding: 1%;
+}
+.user-blog h1 {
+  padding: 2% 0px;
+}
+.user-blog form {
+  display: table;
+  width: 100%;
+}
+.user-blog form .input {
+  display: table-row;
+  margin: 10px 0px;
+  width: 100%;
+  min-height: 40px;
+  line-height: 40px;
+}
+.user-blog form .input span.label {
+  display: table-cell;
+  min-width: 75px;
+  width: 25%;
+}
+.user-blog form .input input {
+  display: table-cell;
+  min-width: 150px;
+  margin-left: 1%;
+  width: 74%;
+}
+.chater {
+  position: fixed;
+  background: #FFF;
+  border: 2px solid #df1806;
+  bottom: 0px;
+  right: 0px;
+  min-height: 250px;
+  height: auto;
+  width: 250px;
+  z-index: 9999;
+}
+.chater .chatheader {
+  min-height: 30px;
+  border-bottom: 2px solid #df1806;
+  background: #fa5b4d;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  text-indent: 10px;
+  color: #FFF;
+}
+.chater .chatmsg {
+  min-height: 200px;
+  width: 100%;
+  height: 80%;
+}
+.chater .chattext {
+  border-top: 2px solid #fa5b4d;
+  min-height: 40px;
+  width: 100%;
+  height: 15%;
 }
